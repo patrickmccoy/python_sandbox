@@ -21,5 +21,11 @@ class TestPeople(unittest.TestCase):
         self.assertEqual(self.person.get_first_name(), self.name.split(' ')[0])
         self.assertEqual(self.person.get_last_name(), self.name.split(' ')[1])
 
+    def test_set_first_name(self):
+        self.name = 'Felipe'
+        self.assertEqual(self.person.set_first_name(self.name), self.name)
+        self.assertEqual(self.person.get_first_name(), self.name)
+
+
 if __name__ == '__main__':
     unittest.main()
