@@ -1,9 +1,17 @@
 import string
+import uuid
 
 class People:
     def __init__(self, name):
         (self.first, self.last) = name.split(' ')
+        self._id = uuid.uuid4()
     
+    def get_id(self, string=False):
+        if (string):
+            return str(self._id)
+        else:
+            return self._id
+
     def get_name(self):
         return string.join((self.first, self.last))
 

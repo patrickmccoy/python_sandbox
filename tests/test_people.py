@@ -1,5 +1,6 @@
 from People import People
 import unittest
+import uuid
 
 class TestPeople(unittest.TestCase):
     def setUp(self):
@@ -26,6 +27,8 @@ class TestPeople(unittest.TestCase):
         self.assertEqual(self.person.set_first_name(self.name), self.name)
         self.assertEqual(self.person.get_first_name(), self.name)
 
+    def test_get_uid(self):
+        self.assertIsInstance(self.person.get_id(), uuid.UUID)
 
 if __name__ == '__main__':
     unittest.main()
