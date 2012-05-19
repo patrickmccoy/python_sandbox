@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Fibonacci numbers module
 
 def fib(n):    # write Fibonacci series up to n
